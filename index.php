@@ -48,6 +48,7 @@ $work = new Works;
         $allworks = $work->get_works();
         foreach($allworks as $w)
 
+
     ?>
 
     <h1>Titre<?=$w["title"]?></h1>
@@ -57,5 +58,9 @@ $work = new Works;
     <p><img src='<?php echo $Works->image->url ?>'></p>
     <img class="img-fluid" width="100%" src='<?php echo $w["image"] ?>'>
     
+
+
+    
+
 </body>
 </html>

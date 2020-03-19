@@ -6,7 +6,7 @@ include_once("php/code.php");
 $user = new Users;
 if(isset($_SESSION["account"]["id"]))
 {
-    header('Location: /');
+    header('Location: index.php');
 }
 if(isset($_POST["submit"]))
 {
@@ -15,6 +15,7 @@ if(isset($_POST["submit"]))
     if($_POST['uname'] != NULL && $_POST['psw'] != NULL)
     {
         $user->connect($_POST["uname"], $_POST["psw"]);
+        header('Location: index.php');
     }
     else
     {
